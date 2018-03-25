@@ -1,0 +1,6 @@
+version: '3'
+services:
+  ssm-core:
+    image: "hoanglt705/ssm-core-legacy-docker:latest"
+    ports:
+     - "8080:8080"
