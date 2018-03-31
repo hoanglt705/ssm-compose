@@ -4,3 +4,9 @@ services:
     image: "hoanglt705/ssm-core-legacy-docker:latest"
     ports:
      - "8080:8080"
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: rootpass
