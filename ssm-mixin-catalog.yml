@@ -1,0 +1,20 @@
+version: '2.1'
+services:
+  catalog-db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_USER: root
+      MYSQL_DATABASE: ssm-catalog
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+  ssm-catalog:
+    image: hoanglt705/ssm-catalog-service:latest
+    ports:
+     - "8081:8081"
+    depends_on:
+      catalog-db: 
+        condition: service_healthy
