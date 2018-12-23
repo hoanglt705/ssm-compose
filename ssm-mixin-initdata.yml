@@ -3,5 +3,5 @@ services:
   ssm-initdata:
     image: hoanglt705/ssm-core-legacy-initdata-docker:latest
     depends_on:
-      ssm-core: 
+      db: 
         condition: service_healthy
