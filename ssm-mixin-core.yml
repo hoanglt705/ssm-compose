@@ -1,14 +1,6 @@
-version: '2.1'
+version: '3.7'
 services:
   ssm-core:
     image: hoanglt705/ssm-core-legacy-docker:latest
     ports:
      - "8081:8081"
-    depends_on:
-      db: 
-        condition: service_healthy
-    healthcheck:
-      test: curl --fail -s http://localhost:8081/actuator/health || exit 1
-      interval: 1m30s
-      timeout: 10s
-      retries: 3

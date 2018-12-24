@@ -1,0 +1,2 @@
+FROM mysql
+COPY ./data/mysql/ssm-db.sql /docker-entrypoint-initdb.d

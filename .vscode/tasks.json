@@ -6,13 +6,13 @@
         {
             "label": "start compose",
             "type": "shell",
-            "command": "docker-compose.exe -f ssm-mixin-db.yml -f ssm-mixin-core.yml -f ssm-mixin-initdata.yml up",
+            "command": "docker-compose.exe -f ssm-mixin-db.yml -f ssm-mixin-core.yml up",
             "problemMatcher": []
         },
         {
             "label": "stop compose",
             "type": "shell",
-            "command": "docker-compose.exe -f ssm-mixin-db.yml -f ssm-mixin-core.yml -f ssm-mixin-initdata.yml down",
+            "command": "docker-compose.exe -f ssm-mixin-db.yml -f ssm-mixin-core.yml down",
             "problemMatcher": []
         }
     ]

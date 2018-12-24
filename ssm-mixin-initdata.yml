@@ -1,7 +1,0 @@
-version: '2.1'
-services:
-  ssm-initdata:
-    image: hoanglt705/ssm-core-legacy-initdata-docker:latest
-    depends_on:
-      db: 
-        condition: service_healthy

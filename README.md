@@ -1,12 +1,12 @@
 # Command run
 Start infrastructure
 ```bash
-$ docker-compose.exe -f ssm-mixin-db.yml -f ssm-mixin-core.yml -f ssm-mixin-initdata.yml up
+$ docker-compose.exe -f ssm-mixin-db.yml -f ssm-mixin-core.yml up
 ```
 
 Stop infrastructure
 ```bash
-$ docker-compose.exe -f ssm-mixin-db.yml -f ssm-mixin-core.yml -f ssm-mixin-initdata.yml down
+$ docker-compose.exe -f ssm-mixin-db.yml -f ssm-mixin-core.yml down
 ```
 
 Start client
