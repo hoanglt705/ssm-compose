@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  catalog-db:
+    build:
+      context: .
+      dockerfile: docker/SSMCatalogDbDockerfile
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_USER: root
+      MYSQL_DATABASE: ssm-catalog-db
